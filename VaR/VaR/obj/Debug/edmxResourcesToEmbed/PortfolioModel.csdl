@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PortfolioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Tick">
+    <Key>
+      <PropertyRef Name="Tick_id" />
+    </Key>
+    <Property Name="Tick_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Index" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TradingDay" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Volume" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="PortfolioEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ticks" EntityType="Self.Tick" />
+  </EntityContainer>
+</Schema>

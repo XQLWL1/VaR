@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PortfolioModelStoreContainer" CdmEntityContainer="PortfolioEntities">
+    <EntitySetMapping Name="Ticks">
+      <EntityTypeMapping TypeName="PortfolioModel.Tick">
+        <MappingFragment StoreEntitySet="Tick">
+          <ScalarProperty Name="Tick_id" ColumnName="Tick_id" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+          <ScalarProperty Name="TradingDay" ColumnName="TradingDay" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

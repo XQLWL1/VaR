@@ -1,0 +1,15 @@
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\bin\Debug\VaR.exe.config
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\bin\Debug\VaR.exe
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\bin\Debug\VaR.pdb
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\bin\Debug\EntityFramework.dll
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\bin\Debug\EntityFramework.xml
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\obj\Debug\VaR.csprojAssemblyReference.cache
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\obj\Debug\VaR.Form1.resources
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\obj\Debug\VaR.Properties.Resources.resources
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\obj\Debug\VaR.csproj.GenerateResource.cache
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\obj\Debug\VaR.csproj.CoreCompileInputs.cache
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\obj\Debug\VaR.csproj.CopyComplete
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\obj\Debug\VaR.exe
+C:\Users\Vivi\source\repos\XQLWL1\VaR\VaR\VaR\obj\Debug\VaR.pdb
