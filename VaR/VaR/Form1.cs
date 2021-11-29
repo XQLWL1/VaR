@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace VaR
         PortfolioEntities context = new PortfolioEntities();
         List<Tick> ticks;
         List<PortfolioItem> Portfolio = new List<PortfolioItem>();
+        List<decimal> Nyereségek;
 
 
         public Form1()
@@ -26,8 +28,13 @@ namespace VaR
             dataGridView1.DataSource = ticks;
 
             CreatePortflio();
-            List<decimal> Nyereségek = new List<decimal>();
+
+
+            Nyereségek = new List<decimal>();
+
+            //nem lesz nulla az értéke, mivel itt adunk egy értéket ennek:
             int intervalum = 30;
+
             DateTime kezdőDátum = (from x in ticks select x.TradingDay).Min();
             DateTime záróDátum = new DateTime(2016, 12, 30);
             TimeSpan z = záróDátum - kezdőDátum;
@@ -83,6 +90,25 @@ namespace VaR
                 value += (decimal)last.Price * item.Volume;
             }
             return value;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter streamWriter = new StreamWriter(saveFileDialog.FileName))
+                {
+
+                    int counter = 1;
+
+                    foreach (decimal item in Nyereségek)
+                    {
+                        streamWriter.WriteLine(string.Format("{0};{1}", counter, item));
+                        counter++;
+                    }
+                }
+            }
         }
     }
 }
