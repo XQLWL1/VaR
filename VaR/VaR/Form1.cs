@@ -33,16 +33,22 @@ namespace VaR
             TimeSpan z = záróDátum - kezdőDátum;
             for (int i = 0; i < z.Days - intervalum; i++)
             {
+                //Az első napon vett érték - a 30. napon vett érték és hozzáadjuk a nyereségekhez
                 decimal ny = GetPortfolioValue(kezdőDátum.AddDays(i + intervalum))
                            - GetPortfolioValue(kezdőDátum.AddDays(i));
                 Nyereségek.Add(ny);
+
+                //ezt kiírjuk:
                 Console.WriteLine(i + " " + ny);
             }
 
+            //Lesz egy lista, mely a nyereségeket mutatja meg az adott napokon és rendezi
             var nyereségekRendezve = (from x in Nyereségek
                                       orderby x
                                       select x)
                                         .ToList();
+
+            //A nyereségek listának az egyik elemét veszi öttel osztva, Ez lesz a VAR érték
             MessageBox.Show(nyereségekRendezve[nyereségekRendezve.Count() / 5].ToString());
         }
 
